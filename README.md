@@ -2,8 +2,9 @@
 
 Master Math with Confidence. Scan any math problem, get instant solutions, and see step-by-step explanations. StudyMithraa is your personal tutor in your pocket.
 
-## 🚀 Live Demo
-**[Run StudyMithraa Now](https://uravularajesh59-del.github.io/StudyMithraa/)**
+## 🌐 Live Access
+- **[Live Demo (Website)](https://uravularajesh59-del.github.io/StudyMithraa/)** - Run the app directly in your browser.
+- **[GitHub Repository](https://github.com/uravularajesh59-del/StudyMithraa)** - View the source code.
 
 ## ✨ Features
 - **Official Branding**: Integrated with the StudyMithraa logo and theme.

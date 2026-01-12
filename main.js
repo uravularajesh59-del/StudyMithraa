@@ -23,39 +23,8 @@
                 this.showToast("Coming Soon! We are finalizing the app store release. 🚀");
             });
         });
-
-        this.initScrollEffects();
     },
 
-    initScrollEffects() {
-        const videos = document.querySelectorAll('.bg-video');
-        const sections = [
-            document.querySelector('.hero'),
-            document.getElementById('features'),
-            document.getElementById('how-it-works'),
-            document.getElementById('solver-app')
-        ];
-
-        window.addEventListener('scroll', () => {
-            let currentSectionIndex = 0;
-            const scrollPos = window.scrollY + window.innerHeight / 3;
-
-            sections.forEach((section, index) => {
-                if (section && scrollPos > section.offsetTop) {
-                    currentSectionIndex = index;
-                }
-            });
-
-            videos.forEach((video, index) => {
-                if (index === currentSectionIndex) {
-                    video.classList.add('active');
-                    if (video.paused) video.play();
-                } else {
-                    video.classList.remove('active');
-                }
-            });
-        });
-    },
 
     showToast(message) {
         const toast = document.createElement('div');
