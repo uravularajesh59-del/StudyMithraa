@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyMithraa | Solve Math Instantly</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="StudyMithraa Logo" class="logo-img">
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it Works</a>
+                <button class="btn btn-accent">Get App</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-text animate-fade-in">
+                <h1>Master Math with <span class="highlight-orange">Confidence.</span></h1>
+                <p>Scan any math problem, get instant solutions, and see step-by-step explanations. StudyMithraa is your
+                    personal tutor in your pocket.</p>
+                <div class="hero-btns">
+                    <button class="btn btn-primary btn-lg" onclick="app.showScanner()">
+                        <i class="fas fa-camera"></i> Start Solving
+                    </button>
+                    <button class="btn btn-outline">
+                        <i class="fab fa-apple"></i> App Store
+                    </button>
+                    <button class="btn btn-outline">
+                        <i class="fab fa-google-play"></i> Google Play
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual animate-fade-in" style="animation-delay: 0.2s;">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="scanner-simulate">
+                            <div class="scan-frame"></div>
+                            <div class="scan-laser"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="solver-app" class="hidden">
+        <div class="container">
+            <div class="app-container">
+                <div class="scanner-window" id="camera-view">
+                    <video id="video" autoplay playsinline></video>
+                    <div class="scanner-overlay">
+                        <div class="camera-frame"></div>
+                        <p>Frame your math problem</p>
+                    </div>
+                    <div class="scanner-controls">
+                        <button class="capture-btn" id="capture"><i class="fas fa-circle"></i></button>
+                    </div>
+                </div>
+
+                <div class="solution-panel hidden" id="solution-view">
+                    <div class="solution-header">
+                        <button class="back-btn" onclick="app.showScanner()"><i class="fas fa-arrow-left"></i></button>
+                        <h3>Solution</h3>
+                    </div>
+                    <div class="problem-preview card">
+                        <div class="tag">Detected</div>
+                        <div class="math-problem" id="detected-math">2x + 5 = 15</div>
+                    </div>
+                    <div class="solution-steps" id="steps-container">
+                        <!-- Steps will be injected here -->
+                    </div>
+                    <button class="btn btn-primary full-width">Explain More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2 class="section-title">Why Students Love <span>StudyMithraa</span></h2>
+            <div class="features-grid">
+                <div class="feature-card card">
+                    <div class="feature-icon orange"><i class="fas fa-bolt"></i></div>
+                    <h3>Instant Solving</h3>
+                    <p>No more waiting. Get your answers in milliseconds with our high-speed math engine.</p>
+                </div>
+                <div class="feature-card card">
+                    <div class="feature-icon red"><i class="fas fa-list-ol"></i></div>
+                    <h3>Step-by-Step</h3>
+                    <p>Don't just get the answer. Understand the 'how' and 'why' with detailed breakdowns.</p>
+                </div>
+                <div class="feature-card card">
+                    <div class="feature-icon blue"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h3>Free to Use</h3>
+                    <p>Core features are always free for students to help you succeed in your studies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-section">
+        <div class="container">
+            <h2 class="section-title">How It <span>Works</span></h2>
+            <div class="how-grid">
+                <div class="how-item">
+                    <div class="how-num">1</div>
+                    <div class="how-content">
+                        <h3>Scan</h3>
+                        <p>Use your camera to frame the math problem.</p>
+                    </div>
+                </div>
+                <div class="how-item">
+                    <div class="how-num">2</div>
+                    <div class="how-content">
+                        <h3>Solve</h3>
+                        <p>Watch as StudyMithraa breaks it down instantly.</p>
+                    </div>
+                </div>
+                <div class="how-item">
+                    <div class="how-num">3</div>
+                    <div class="how-content">
+                        <h3>Learn</h3>
+                        <p>Study the steps and master the concept.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    <div class="video-background">
+        <video autoplay muted loop class="bg-video active" id="video-1">
+            <source src="https://pixabay.com/videos/download/x-285255_medium.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop class="bg-video" id="video-2">
+            <source src="https://pixabay.com/videos/download/x-278200_medium.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop class="bg-video" id="video-3">
+            <source src="https://pixabay.com/videos/download/x-1992_medium.mp4" type="video/mp4">
+        </video>
+        <video autoplay muted loop class="bg-video" id="video-4">
+            <source src="https://pixabay.com/videos/download/x-70216_medium.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="logo.png" alt="StudyMithraa Logo" class="logo-img">
+                </div>
+                <p>Empowering students with instant math solutions and step-by-step learning.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Product</h4>
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it Works</a>
+                <a href="#">Solver App</a>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="#">Help Center</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 StudyMithraa. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
